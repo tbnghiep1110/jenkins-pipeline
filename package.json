@@ -1,0 +1,20 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo hello",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tbnghiep1110/jenkins-pipeline.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbnghiep1110/jenkins-pipeline/issues"
+  },
+  "homepage": "https://github.com/tbnghiep1110/jenkins-pipeline#readme"
+}
