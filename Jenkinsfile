@@ -1,6 +1,9 @@
 
 pipeline {
       agent any
+      {
+        args '-u 0:0'
+      }
       environment {
         docker_image = "tbnghiep11/node-app"
       }
