@@ -1,12 +1,13 @@
 
 pipeline {
-agent any
+agent none
 environment {
   DOCKER_IMAGE = "tbnghiep11/node-app"
   DOCKER_TAG = 'latest'
   // DOCKERHUB_CREDENTIALS = credentials ("docker-hub")
 }
-stage("build") {
+  stages{
+  stage("build") {
       agent { node {label 'Build-In Node'}}
       environment {
         DOCKER_TAG="${GIT_BRANCH.tokenize('/').pop()}-${GIT_COMMIT.substring(0,7)}"
@@ -26,15 +27,9 @@ stage("build") {
         sh "docker image rm ${DOCKER_IMAGE}:latest"
       }
     }
-      post {
-    success {
-      echo "SUCCESSFUL"
-    }
-    failure {
-      echo "FAILED"
-    }
   }
-    }
+}
+
 
 
 
