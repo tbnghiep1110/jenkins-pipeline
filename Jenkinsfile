@@ -10,7 +10,7 @@ environment {
       stage("build")
       {
         steps {
-          sh 'docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG}'
+          sh 'docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .'
         }
       }
       stage ("push")
