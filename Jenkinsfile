@@ -13,11 +13,11 @@ environment {
         docker {
           image "node:18"
           args "-u 0:0"
-        }
+      }
+      }
         steps {
           echo "testing..."
         }
-      }
     }
   stage("build") {
       agent { node {label 'master'}}
